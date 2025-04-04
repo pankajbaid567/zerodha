@@ -1,0 +1,94 @@
+/* Custom step indicators */
+.step-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+    color: #6c757d;
+    font-weight: 500;
+  }
+  
+  .step-indicator.active {
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+  .step-line {
+    height: 2px;
+    width: 60px;
+    background-color: #e9ecef;
+  }
+  
+  /* Success checkmark animation */
+  .success-checkmark {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid #4CAF50;
+    position: relative;
+  }
+  
+  .success-checkmark .check-icon {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%) rotate(45deg);
+    transform-origin: center;
+  }
+  
+  .success-checkmark .check-icon .icon-line {
+    height: 4px;
+    background-color: #4CAF50;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+  }
+  
+  .success-checkmark .check-icon .icon-line.line-tip {
+    width: 25px;
+    left: 14px;
+    top: 25px;
+    transform: rotate(45deg);
+  }
+  
+  .success-checkmark .check-icon .icon-line.line-long {
+    width: 47px;
+    right: 8px;
+    top: 13px;
+    transform: rotate(-45deg);
+  }
+  
+  /* Custom Bootstrap overrides */
+  .form-control:focus, 
+  .form-select:focus, 
+  .form-check-input:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+  
+  .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+  }
+  
+  .btn-primary:disabled {
+    background-color: #8cb1ea;
+    border-color: #8cb1ea;
+  }
+  
+  /* For smooth transitions */
+  .form-control, .btn, .step-indicator {
+    transition: all 0.2s ease-in-out;
+  }
